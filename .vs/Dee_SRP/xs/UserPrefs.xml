@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{B895B8E2-8AF4-181C-4B5F-A62A4B67E677}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SRP 02/InstancedColor.cs">
+    <Files>
+      <File FileName="Assets/Shaders/SRP FirstSH.shader" Line="16" Column="60" />
+      <File FileName="Assets/Shaders/SRP FirstSH.hlsl" Line="23" Column="19" />
+      <File FileName="Assets/Scripts/DeePipeline.cs" Line="70" Column="1" />
+      <File FileName="Assets/Scripts/DeePipelineAsset.cs" Line="16" Column="25" />
+      <File FileName="Assets/Scripts/SRP 02/InstancedColor.cs" Line="8" Column="11" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -6,6 +6,21 @@ using Conditional = System.Diagnostics.ConditionalAttribute;
 
 public class DeePipeline : RenderPipeline
 {
+    DrawRendererFlags drawRendererFlags;
+
+    public DeePipeline(bool dynamicBatching, bool instancing)
+    {
+        if (dynamicBatching)
+        {
+            drawRendererFlags |= DrawRendererFlags.EnableDynamicBatching;
+        }
+
+        if(instancing)
+        {
+            drawRendererFlags |= DrawRendererFlags.EnableInstancing;
+        }
+    }
+
     public override void Render(ScriptableRenderContext renderContext, Camera[] cameras)
     {
         base.Render(renderContext, cameras);
@@ -51,6 +66,7 @@ public class DeePipeline : RenderPipeline
         //绘制不透明物体
         DrawRendererSettings drawSetting = new DrawRendererSettings(camera, new ShaderPassName("SRPDefaultUnlit"));
         drawSetting.sorting.flags = SortFlags.CommonOpaque; //告诉渲染器从前向后渲染(减少overdraw)
+        drawSetting.flags = drawRendererFlags; //开启动态合批
         FilterRenderersSettings filterSetting = new FilterRenderersSettings(true) {
             renderQueueRange = RenderQueueRange.opaque //过滤出不透明shape
         };
